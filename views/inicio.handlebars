@@ -1,0 +1,32 @@
+{{! formulário }}
+
+{{!form}}
+<form action="/cadastrar" method="POST">
+    <img src="imagens/icone.png" class="img">
+    
+    <input type="text" placeholder="Nome" name="nome" class="form-control">
+    <input type="text" placeholder="Idade" name="idade" class="form-control">
+    <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>
+
+{{! Tabela  }}
+
+{{!table}}
+<table class="table table-striped">
+    <thead>
+
+        {{#each dados}}
+        <tr>
+            <th>{{nome}}</th>
+            <th>{{idade}}</th>
+            <th> <a href="selecionar/,{{id}}">selecionar<a/></th>
+        </tr>
+        {{/each}}
+    
+    </thead>
+</table>
+
+
+
+
+
