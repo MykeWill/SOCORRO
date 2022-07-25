@@ -1,5 +1,5 @@
 //importar modulos
-
+let http = require('http')
 let express = require('express')
 let {engine} = require('express-handlebars')
 let bodyParser = require('body-parser')
@@ -33,11 +33,12 @@ app.post('/cadastrar', function(req, res){
 
     fetch('http://localhost:3000/clientes', {
         method:'POST',
-        body: JSON.stringify(dados),
-        Headers:{'contenty-Type': 'application/json'}
+        body: JSON.stringify(dados ),
+        headers:{'contenty-Type': 'application/json'}
+    
     
     })
-    .then(res.redirect('/'))
+     .then(res.redirect('/'))
    
 })
 
